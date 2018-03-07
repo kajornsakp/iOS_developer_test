@@ -124,6 +124,7 @@
 		4DB9F6D7204FC11E0096AF35 /* twitterSearch */ = {
 			isa = PBXGroup;
 			children = (
+				4DB9F759205054B90096AF35 /* Modules */,
 				4DB9F6D8204FC11E0096AF35 /* AppDelegate.swift */,
 				4DB9F6DA204FC11E0096AF35 /* ViewController.swift */,
 				4DB9F6DC204FC11E0096AF35 /* Main.storyboard */,
@@ -150,6 +151,85 @@
 				4DB9F6FA204FC11E0096AF35 /* Info.plist */,
 			);
 			path = twitterSearchUITests;
+			sourceTree = "<group>";
+		};
+		4DB9F759205054B90096AF35 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				4DB9F75A205054C10096AF35 /* Search */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		4DB9F75A205054C10096AF35 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				4DB9F762205054FB0096AF35 /* Protocols */,
+				4DB9F761205054F30096AF35 /* View */,
+				4DB9F760205054EC0096AF35 /* Presenter */,
+				4DB9F75F205054E60096AF35 /* Interactor */,
+				4DB9F75E205054E10096AF35 /* Wireframe */,
+				4DB9F75D205054DA0096AF35 /* Entity */,
+				4DB9F75C205054D50096AF35 /* DataManager */,
+				4DB9F75B205054CE0096AF35 /* Common */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		4DB9F75B205054CE0096AF35 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		4DB9F75C205054D50096AF35 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		4DB9F75D205054DA0096AF35 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		4DB9F75E205054E10096AF35 /* Wireframe */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Wireframe;
+			sourceTree = "<group>";
+		};
+		4DB9F75F205054E60096AF35 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		4DB9F760205054EC0096AF35 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		4DB9F761205054F30096AF35 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4DB9F762205054FB0096AF35 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		FE1C8041EFE809E19DC9166C /* Pods */ = {
