@@ -16,6 +16,15 @@
 		4DB9F6E3204FC11E0096AF35 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DB9F6E1204FC11E0096AF35 /* LaunchScreen.storyboard */; };
 		4DB9F6EE204FC11E0096AF35 /* twitterSearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB9F6ED204FC11E0096AF35 /* twitterSearchTests.swift */; };
 		4DB9F6F9204FC11E0096AF35 /* twitterSearchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB9F6F8204FC11E0096AF35 /* twitterSearchUITests.swift */; };
+		4DB9F764205055490096AF35 /* SearchProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB9F763205055490096AF35 /* SearchProtocols.swift */; };
+		4DB9F7662050556A0096AF35 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB9F7652050556A0096AF35 /* SearchViewController.swift */; };
+		4DB9F7682050557D0096AF35 /* SearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB9F7672050557D0096AF35 /* SearchPresenter.swift */; };
+		4DB9F76A2050558B0096AF35 /* SearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB9F7692050558B0096AF35 /* SearchInteractor.swift */; };
+		4DB9F76C205055A00096AF35 /* SearchWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB9F76B205055A00096AF35 /* SearchWireframe.swift */; };
+		4DB9F76E205055B20096AF35 /* TweetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB9F76D205055B20096AF35 /* TweetModel.swift */; };
+		4DB9F770205055C30096AF35 /* SearchDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB9F76F205055C30096AF35 /* SearchDataManager.swift */; };
+		4DB9F772205055D60096AF35 /* SearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB9F771205055D60096AF35 /* SearchService.swift */; };
+		4DB9F7762050594C0096AF35 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DB9F7752050594C0096AF35 /* SafariServices.framework */; };
 		CF3D359B680E272B74FCB3D5 /* Pods_twitterSearchUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50F78324953665A85B4B0982 /* Pods_twitterSearchUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +63,15 @@
 		4DB9F6F4204FC11E0096AF35 /* twitterSearchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = twitterSearchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DB9F6F8204FC11E0096AF35 /* twitterSearchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = twitterSearchUITests.swift; sourceTree = "<group>"; };
 		4DB9F6FA204FC11E0096AF35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4DB9F763205055490096AF35 /* SearchProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchProtocols.swift; sourceTree = "<group>"; };
+		4DB9F7652050556A0096AF35 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		4DB9F7672050557D0096AF35 /* SearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPresenter.swift; sourceTree = "<group>"; };
+		4DB9F7692050558B0096AF35 /* SearchInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchInteractor.swift; sourceTree = "<group>"; };
+		4DB9F76B205055A00096AF35 /* SearchWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchWireframe.swift; sourceTree = "<group>"; };
+		4DB9F76D205055B20096AF35 /* TweetModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetModel.swift; sourceTree = "<group>"; };
+		4DB9F76F205055C30096AF35 /* SearchDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDataManager.swift; sourceTree = "<group>"; };
+		4DB9F771205055D60096AF35 /* SearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchService.swift; sourceTree = "<group>"; };
+		4DB9F7752050594C0096AF35 /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
 		50F78324953665A85B4B0982 /* Pods_twitterSearchUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_twitterSearchUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EF3935309AE45014551055D /* Pods-twitterSearchUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-twitterSearchUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-twitterSearchUITests/Pods-twitterSearchUITests.release.xcconfig"; sourceTree = "<group>"; };
 		B6AAD3C4CD451362F3EFD43D /* Pods-twitterSearchTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-twitterSearchTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-twitterSearchTests/Pods-twitterSearchTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -66,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DB9F7762050594C0096AF35 /* SafariServices.framework in Frameworks */,
 				33DB6B3C0E87B58084C4E57B /* Pods_twitterSearch.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -92,6 +111,7 @@
 		45CD13E913F1C01542C59D90 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4DB9F7752050594C0096AF35 /* SafariServices.framework */,
 				08D9409E1A9D042A1CF29221 /* Pods_twitterSearch.framework */,
 				46DEB21807291A8956089A36 /* Pods_twitterSearchTests.framework */,
 				50F78324953665A85B4B0982 /* Pods_twitterSearchUITests.framework */,
@@ -124,6 +144,7 @@
 		4DB9F6D7204FC11E0096AF35 /* twitterSearch */ = {
 			isa = PBXGroup;
 			children = (
+				4DB9F773205056C50096AF35 /* Common */,
 				4DB9F759205054B90096AF35 /* Modules */,
 				4DB9F6D8204FC11E0096AF35 /* AppDelegate.swift */,
 				4DB9F6DA204FC11E0096AF35 /* ViewController.swift */,
@@ -179,6 +200,7 @@
 		4DB9F75B205054CE0096AF35 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				4DB9F771205055D60096AF35 /* SearchService.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -186,6 +208,7 @@
 		4DB9F75C205054D50096AF35 /* DataManager */ = {
 			isa = PBXGroup;
 			children = (
+				4DB9F76F205055C30096AF35 /* SearchDataManager.swift */,
 			);
 			path = DataManager;
 			sourceTree = "<group>";
@@ -193,6 +216,7 @@
 		4DB9F75D205054DA0096AF35 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				4DB9F76D205055B20096AF35 /* TweetModel.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -200,6 +224,7 @@
 		4DB9F75E205054E10096AF35 /* Wireframe */ = {
 			isa = PBXGroup;
 			children = (
+				4DB9F76B205055A00096AF35 /* SearchWireframe.swift */,
 			);
 			path = Wireframe;
 			sourceTree = "<group>";
@@ -207,6 +232,7 @@
 		4DB9F75F205054E60096AF35 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
+				4DB9F7692050558B0096AF35 /* SearchInteractor.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -214,6 +240,7 @@
 		4DB9F760205054EC0096AF35 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				4DB9F7672050557D0096AF35 /* SearchPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -221,6 +248,7 @@
 		4DB9F761205054F30096AF35 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				4DB9F7652050556A0096AF35 /* SearchViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -228,8 +256,24 @@
 		4DB9F762205054FB0096AF35 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				4DB9F763205055490096AF35 /* SearchProtocols.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		4DB9F773205056C50096AF35 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				4DB9F774205056CA0096AF35 /* Headers */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		4DB9F774205056CA0096AF35 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Headers;
 			sourceTree = "<group>";
 		};
 		FE1C8041EFE809E19DC9166C /* Pods */ = {
@@ -550,7 +594,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DB9F76A2050558B0096AF35 /* SearchInteractor.swift in Sources */,
+				4DB9F76C205055A00096AF35 /* SearchWireframe.swift in Sources */,
+				4DB9F764205055490096AF35 /* SearchProtocols.swift in Sources */,
 				4DB9F6DB204FC11E0096AF35 /* ViewController.swift in Sources */,
+				4DB9F7682050557D0096AF35 /* SearchPresenter.swift in Sources */,
+				4DB9F770205055C30096AF35 /* SearchDataManager.swift in Sources */,
+				4DB9F76E205055B20096AF35 /* TweetModel.swift in Sources */,
+				4DB9F772205055D60096AF35 /* SearchService.swift in Sources */,
+				4DB9F7662050556A0096AF35 /* SearchViewController.swift in Sources */,
 				4DB9F6D9204FC11E0096AF35 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
