@@ -16,12 +16,14 @@ class LoginPresenter : LoginPresenterProtocol{
     var wireframe: LoginWireframeProtocol?
     
     func didTapLoginButton() {
+        view?.showLoading()
         interactor?.loginWithTwitter()
     }
 }
 
 extension LoginPresenter : LoginInteractorOutputProtocol{
     func didLoginSuccess() {
+        view?.hideLoading()
         wireframe?.presentSearchModule(from: view!)
     }
     

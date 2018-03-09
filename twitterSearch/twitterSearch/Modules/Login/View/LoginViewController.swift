@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import PKHUD
 
 class LoginViewController: UIViewController {
 
@@ -14,10 +15,10 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
 
     @IBAction func didTapLoginButton(_ sender: Any) {
+        
         presenter?.didTapLoginButton()
     }
     
@@ -25,15 +26,15 @@ class LoginViewController: UIViewController {
 
 extension LoginViewController : LoginViewProtocol{
     func showError(_ errorMessage: String) {
-        print(errorMessage)
+        HUD.flash(.labeledError(title: "Error", subtitle: errorMessage), delay: 1.0)
     }
     
     func showLoading() {
-        print("loading")
+        HUD.show(.progress)
     }
     
     func hideLoading() {
-        print("hiding")
+        HUD.flash(.success,delay : 1.0)
     }
     
   
