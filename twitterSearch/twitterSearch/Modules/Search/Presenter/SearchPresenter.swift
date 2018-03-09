@@ -35,7 +35,6 @@ extension SearchPresenter : SearchInteractorOutputProtocol{
         view?.showTweets(with: tweet)
     }
     func onError(_ errorMessage: String) {
-        view?.hideLoading()
         view?.showError(errorMessage)
     }
     

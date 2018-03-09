@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import PKHUD
 
 class SearchViewController: UIViewController {
     
@@ -68,15 +68,16 @@ extension SearchViewController : SearchViewProtocol{
     }
     
     func showError(_ errorMessage: String) {
+        HUD.flash(.labeledError(title: "Error", subtitle: errorMessage), delay: 1.0)
         print(errorMessage)
     }
     
     func showLoading() {
-        print("loading")
+        HUD.show(.progress)
     }
     
     func hideLoading() {
-        print("hide loading")
+        HUD.flash(.success, delay: 1.0)
     }
     
     
