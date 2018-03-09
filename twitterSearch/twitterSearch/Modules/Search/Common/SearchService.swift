@@ -8,7 +8,6 @@
 
 import Foundation
 import Moya
-import TwitterKit
 
 public enum Twitter{
     case search(String)

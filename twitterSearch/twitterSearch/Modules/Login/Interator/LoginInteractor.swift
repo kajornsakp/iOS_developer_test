@@ -19,12 +19,8 @@ class LoginInteractor : LoginInteractorInputProtocol{
 }
 
 extension LoginInteractor : LoginDataManagerOutputProtocol{
-    func didLoginSuccess(_ token: String, secretKey: String) {
-        print("login success!")
-        print(token)
-        print(secretKey)
-        UserDefaults.standard.setValue(token, forKey: "twitterSearch.authToken")
-        UserDefaults.standard.setValue(secretKey, forKey: "twitterSearch.authTokenSecret")
+    func didLoginSuccess(_ token: String) {
+        UserDefaults.standard.set(token, forKey: "twitterSearch.loginBearerToken")
         presenter?.didLoginSuccess()
     }
     

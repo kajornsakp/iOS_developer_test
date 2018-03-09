@@ -8,7 +8,6 @@
 
 import Foundation
 import Moya
-import TwitterKit
 
 class SearchDataManager : SearchDataManagerInputProtocol{
     var requestHandler: SearchDataManagerOutputProtocol?

@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import TwitterKit
 import Moya
 
 class LoginDataManager : LoginDataManagerInputProtocol{
@@ -15,28 +14,26 @@ class LoginDataManager : LoginDataManagerInputProtocol{
     var provider = MoyaProvider<Login>()
     
     func loginWithTwitter() {
-        TWTRTwitter.sharedInstance().logIn{session,error in
-            if(session != nil){
-                self.requestHandler?.didLoginSuccess((session?.authToken)!, secretKey: (session?.authTokenSecret)!)
-                self.getToken()
-            }else{
-                self.requestHandler?.didLoginError((error?.localizedDescription)!)
+        self.getToken{ result,error in
+            if let error = error{
+                self.requestHandler?.didLoginError(error)
             }
+            self.requestHandler?.didLoginSuccess((result?.accessToken)!)
         }
     }
     
-    fileprivate func getToken(){
+    fileprivate func getToken(completion : @escaping (_ result : AuthenModel?,_ error : String?)->Void){
         provider.request(.getOauthToken){ result in
             switch result{
             case .success(let result):
                 do {
                     let tweet : AuthenModel = try result.map(AuthenModel.self)
-                    UserDefaults.standard.set(tweet.accessToken, forKey: "twitterSearch.loginBearerToken")
+                    completion(tweet,nil)
                 }catch{
-                    print(error)
+                    completion(nil,error.localizedDescription)
                 }
             case .failure(let error):
-                print(error.response)
+                completion(nil,error.errorDescription)
             }
         }
     }

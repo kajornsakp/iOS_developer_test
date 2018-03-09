@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import TwitterKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,7 +16,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        registerTwitterSDK()
 //        let searchView = SearchWireframe.createSearchModule()
         let loginView = LoginWireframe.createLoginModule()
         window = UIWindow(frame: UIScreen.main.bounds)
@@ -48,14 +46,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
-    func registerTwitterSDK(){
-        TWTRTwitter.sharedInstance().start(withConsumerKey: "tyTh7PBxdauR4VKCkk1FRtH6b", consumerSecret: "XmPVf0FN3dT0mzdnPZH0U8iNs2ZQ3HnyqrJUBJtrWJKyzJRAso")
-    }
-    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
-        if TWTRTwitter.sharedInstance().application(app, open: url, options: options){
-            return true
-        }
-        return false
-    }
 }
 

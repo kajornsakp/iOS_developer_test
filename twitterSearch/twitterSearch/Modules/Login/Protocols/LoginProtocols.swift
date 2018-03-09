@@ -50,6 +50,6 @@ protocol LoginDataManagerInputProtocol : class {
 }
 
 protocol LoginDataManagerOutputProtocol : class{
-    func didLoginSuccess(_ token : String, secretKey : String)
+    func didLoginSuccess(_ token : String)
     func didLoginError(_ errorMessage : String)
 }
