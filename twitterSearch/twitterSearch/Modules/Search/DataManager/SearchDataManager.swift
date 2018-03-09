@@ -8,6 +8,7 @@
 
 import Foundation
 import Moya
+import TwitterKit
 
 class SearchDataManager : SearchDataManagerInputProtocol{
     var requestHandler: SearchDataManagerOutputProtocol?
@@ -29,5 +30,19 @@ class SearchDataManager : SearchDataManagerInputProtocol{
         }
     }
     
-    
+    func searchKeywordLegacy(_ key : String){
+        provider.request(.search(key)){ result in
+            switch result{
+            case .success(let result):
+                do {
+                    let tweet : TweetModel = try result.map(TweetModel.self)
+                    self.requestHandler?.onTweetsRetrieved(tweet)
+                }catch{
+                    print(error)
+                }
+            case .failure(let error):
+                print(error.response)
+            }
+        }
+    }
 }

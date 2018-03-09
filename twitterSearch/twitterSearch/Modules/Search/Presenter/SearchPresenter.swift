@@ -23,7 +23,9 @@ class SearchPresenter : SearchPresenterProtocol{
     func showTweetDetail(_ status: Status) {
         //
     }
-    
+    func refreshTweet() {
+        interactor?.retrieveTweets()
+    }
     
 }
 

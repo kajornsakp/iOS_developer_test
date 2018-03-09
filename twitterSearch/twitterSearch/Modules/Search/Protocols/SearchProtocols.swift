@@ -30,6 +30,7 @@ protocol SearchPresenterProtocol : class {
     var wireframe : SearchWireframeProtocol? {get set}
     
     func viewDidLoad()
+    func refreshTweet()
     func showTweetDetail(_ status: Status)
 }
 

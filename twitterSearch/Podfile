@@ -6,6 +6,7 @@ target 'twitterSearch' do
   use_frameworks!
   pod 'Moya','~> 11.0'  
   pod 'TwitterKit'
+  pod 'CryptoSwift'
   # Pods for twitterSearch
 
   target 'twitterSearchTests' do
