@@ -11,6 +11,7 @@ import Moya
 
 public enum Twitter{
     case search(String)
+    case trends(String)
 }
 
 extension Twitter : TargetType{
@@ -23,12 +24,14 @@ extension Twitter : TargetType{
         switch self{
         case .search(_):
             return "1.1/search/tweets.json"
+        case .trends(_):
+            return "/1.1/trends/place.json"
         }
     }
     
     public var method: Moya.Method {
         switch self {
-        case .search:
+        case .search,.trends:
             return .get
         }
     }
@@ -41,12 +44,15 @@ extension Twitter : TargetType{
         switch self {
         case .search(let key):
             return .requestParameters(parameters: ["q":key], encoding: URLEncoding.default)
+        case .trends(let woeId):
+            return .requestParameters(parameters: ["id":woeId], encoding: URLEncoding.default)
         }
+        
     }
     
     public var headers: [String : String]? {
         switch self {
-        case .search(_):
+        case .search,.trends:
             return ["Content-Type":"application/json",
                     "Authorization":"Bearer \(UserDefaults.standard.string(forKey: "twitterSearch.loginBearerToken") ?? "")"]
         }

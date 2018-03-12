@@ -22,7 +22,22 @@ struct SearchMetadata : Codable {
         case query
     }
 }
-
+struct User : Codable {
+    var id : String
+    var name : String
+    var screenName : String
+    var location : String
+    var profileImageUrl : String
+    
+    enum CodingKeys : String,CodingKey{
+        case id = "id_str"
+        case screenName = "screen_name"
+        case profileImageUrl = "profile_image_url_https"
+        
+        case name
+        case location
+    }
+}
 struct Status: Codable{
     var createdAt : String
     var id : String
@@ -30,7 +45,7 @@ struct Status: Codable{
     var truncated : Bool
     var retweetedCount : Int
     var favoriteCount : Int
-    
+    var user : User
     enum CodingKeys : String,CodingKey{
         case createdAt = "created_at"
         case id = "id_str"
@@ -39,6 +54,7 @@ struct Status: Codable{
         
         case text
         case truncated
+        case user
     }
 }
 
