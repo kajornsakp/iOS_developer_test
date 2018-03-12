@@ -31,6 +31,6 @@ class LoginWireframe : LoginWireframeProtocol{
     
     func presentSearchModule(from view: LoginViewProtocol) {
         let vc = view as! LoginViewController
-        vc.present(SearchWireframe.createSearchModule(), animated: true, completion: nil)
+        vc.present(HomeWireframe.createHomeModule(), animated: true, completion: nil)
     }
 }
