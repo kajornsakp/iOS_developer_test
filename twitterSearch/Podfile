@@ -6,6 +6,7 @@ target 'twitterSearch' do
   use_frameworks!
   pod 'Moya','~> 11.0'  
   pod 'PKHUD', '~> 5.0'
+  pod 'Kingfisher', '~>4.0'
   # Pods for twitterSearch
 
   target 'twitterSearchTests' do
