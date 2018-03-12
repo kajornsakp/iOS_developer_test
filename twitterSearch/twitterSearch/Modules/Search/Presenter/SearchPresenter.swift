@@ -14,17 +14,20 @@ class SearchPresenter : SearchPresenterProtocol{
     var interactor: SearchInteractorInputProtocol?
     
     var wireframe: SearchWireframeProtocol?
-    
+    var tempKey : String = ""
     func viewDidLoad() {
-        view?.showLoading()
-        interactor?.retrieveTweets()
+        
     }
-    
+    func searchTweet(_ keyword : String){
+        view?.showLoading()
+        tempKey = keyword
+        interactor?.retrieveTweets(keyword)
+    }
     func showTweetDetail(_ status: Status) {
         //
     }
     func refreshTweet() {
-        interactor?.retrieveTweets()
+        interactor?.retrieveTweets(tempKey)
     }
     
 }
@@ -32,7 +35,7 @@ class SearchPresenter : SearchPresenterProtocol{
 extension SearchPresenter : SearchInteractorOutputProtocol{
     func didRetrievedTweets(_ tweet: TweetModel) {
         view?.hideLoading()
-        view?.showTweets(with: tweet)
+        
     }
     func onError(_ errorMessage: String) {
         view?.showError(errorMessage)

@@ -21,26 +21,11 @@ class SearchDataManager : SearchDataManagerInputProtocol{
                     let tweet : TweetModel = try result.map(TweetModel.self)
                     self.requestHandler?.onTweetsRetrieved(tweet)
                 }catch{
+                    self.requestHandler?.onError("Cannot retrieve tweets")
                     print(error)
                 }
             case .failure(let error):
-                print(error.response)
-            }
-        }
-    }
-    
-    func searchKeywordLegacy(_ key : String){
-        provider.request(.search(key)){ result in
-            switch result{
-            case .success(let result):
-                do {
-                    let tweet : TweetModel = try result.map(TweetModel.self)
-                    self.requestHandler?.onTweetsRetrieved(tweet)
-                }catch{
-                    print(error)
-                }
-            case .failure(let error):
-                print(error.response)
+                self.requestHandler?.onError(error.localizedDescription)
             }
         }
     }

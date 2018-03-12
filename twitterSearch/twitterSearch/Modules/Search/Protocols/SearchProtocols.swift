@@ -12,14 +12,14 @@ protocol SearchViewProtocol : class {
     //presenter to view
     var presenter : SearchPresenterProtocol? {get set}
     
-    func showTweets(with tweet : TweetModel)
     func showError(_ errorMessage : String)
     func showLoading()
     func hideLoading()
+    
 }
 
 protocol SearchWireframeProtocol : class {
-    static func createSearchModule() -> UIViewController
+    static func createSearchModule(with homePresenter : HomePresenterProtocol) -> UIViewController
     
     func presentTweetDetail(from view: SearchViewProtocol,forStatus status : TweetModel)
 }
@@ -30,6 +30,7 @@ protocol SearchPresenterProtocol : class {
     var wireframe : SearchWireframeProtocol? {get set}
     
     func viewDidLoad()
+    func searchTweet(_ keyword : String)
     func refreshTweet()
     func showTweetDetail(_ status: Status)
 }
@@ -43,7 +44,7 @@ protocol SearchInteractorInputProtocol : class {
     var presenter : SearchInteractorOutputProtocol? {get set}
     var dataManager : SearchDataManagerInputProtocol? {get set}
     
-    func retrieveTweets()
+    func retrieveTweets(_ keyword : String)
 }
 
 protocol SearchDataManagerInputProtocol : class{

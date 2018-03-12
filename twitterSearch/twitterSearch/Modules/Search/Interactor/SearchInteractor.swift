@@ -14,8 +14,8 @@ class SearchInteractor: SearchInteractorInputProtocol {
     
     var dataManager: SearchDataManagerInputProtocol?
     
-    func retrieveTweets() {
-        dataManager?.searchKeyword("บุพเพสันนิวาส")
+    func retrieveTweets(_ keyword : String) {
+        dataManager?.searchKeyword(keyword)
     }
     
     
