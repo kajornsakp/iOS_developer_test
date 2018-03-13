@@ -10,8 +10,8 @@ import UIKit
 import Kingfisher
 class HomeTweetTableViewCell: UITableViewCell {
 
-    static let identifier = "SearchTweetTableViewCell"
-    static let nibFile = UINib(nibName: "SearchTweetTableViewCell", bundle: Bundle.main)
+    static let identifier = "HomeTweetTableViewCell"
+    static let nibFile = UINib(nibName: "HomeTweetTableViewCell", bundle: Bundle.main)
     @IBOutlet weak var tweetTitle: UILabel!
     @IBOutlet weak var tweetText: UILabel!
     @IBOutlet weak var retweetLabel: UILabel!

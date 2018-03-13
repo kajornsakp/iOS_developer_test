@@ -14,6 +14,7 @@ class HomeViewController: UIViewController {
     var presenter: HomePresenterProtocol?
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet var emptyView: UIView!
+    @IBOutlet var searchBar: UISearchBar!
     
     //data source
     var statuses : [Status] = []
@@ -21,6 +22,7 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
+        searchBar.delegate = self
         // Do any additional setup after loading the view.
     }
 
@@ -39,14 +41,20 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func didTapSearchButton(_ sender: Any) {
-        presenter?.showSearchModule()
+        searchBar.becomeFirstResponder()
     }
+    
+    
     
 }
 
 
 extension HomeViewController : HomeViewProtocol{
     
+    func showTweets(_ statuses: [Status]) {
+        self.statuses = statuses
+        self.tableView.reloadData()
+    }
     func showError(_ errorMessage: String) {
         HUD.flash(.labeledError(title: "Error", subtitle: errorMessage),delay : 1.0)
     }
@@ -71,5 +79,13 @@ extension HomeViewController : UITableViewDelegate,UITableViewDataSource{
         let status = statuses[indexPath.row]
         cell.status = status
         return cell
+    }
+}
+
+extension HomeViewController : UISearchBarDelegate{
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+        guard let keyword = searchBar.text else {return}
+        self.presenter?.searchTweet(keyword)
     }
 }

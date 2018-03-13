@@ -16,19 +16,20 @@ class HomeWireframe: HomeWireframeProtocol {
     static func createHomeModule() -> UIViewController {
         let navController = storyboard.instantiateViewController(withIdentifier: "HomeNavigationController")
         if let vc = navController.childViewControllers.first as? HomeViewController{
-            let presenter : HomePresenterProtocol = HomePresenter()
+            let presenter : HomePresenterProtocol & HomeInteractorOutputProtocol = HomePresenter()
             let wireframe : HomeWireframeProtocol = HomeWireframe()
+            let interactor : HomeInteractorInputProtocol & HomeDataManagerOutputProtocol = HomeInteractor()
+            let dataManager : HomeDataManagerInputProtocol = HomeDataManager()
             vc.presenter = presenter
             presenter.view = vc
             presenter.wireframe = wireframe
+            presenter.interactor = interactor
+            interactor.presenter = presenter
+            interactor.dataManager = dataManager
+            dataManager.requestHandler = interactor
             return navController
         }
         return UIViewController()
     }
-    
-    func pushToSearchModule(from view: HomeViewProtocol) {
-        let searchVC = SearchWireframe.createSearchModule(with: view.presenter!)
-        let homeVC = view as! HomeViewController
-        homeVC.navigationController?.pushViewController(searchVC, animated: true)
-    }
+
 }

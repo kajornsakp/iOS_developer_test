@@ -10,18 +10,28 @@ import Foundation
 
 class HomePresenter: HomePresenterProtocol {
     var view: HomeViewProtocol?
-    
+    var interactor: HomeInteractorInputProtocol?
     var wireframe: HomeWireframeProtocol?
     
     func viewDidLoad() {
         
     }
-    
-    func showSearchModule() {
-        wireframe?.pushToSearchModule(from: view!)
+    func searchTweet(_ keyword: String) {
+        view?.showLoading()
+        interactor?.retrieveTweets(keyword)
+        print(keyword)
+    }
+}
+
+extension HomePresenter : HomeInteractorOutputProtocol{
+    func didRetrievedTweets(_ tweet: TweetModel) {
+        view?.hideLoading()
+        view?.showTweets(tweet.statuses)
     }
     
-    func didReceivedStatuses(_ statuses: [Status]) {
-        print(statuses)
+    func onError(_ errorMessage: String) {
+        view?.showError(errorMessage)
     }
+    
+    
 }
