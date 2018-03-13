@@ -43,7 +43,7 @@ extension Twitter : TargetType{
     public var task: Task {
         switch self {
         case .search(let key):
-            return .requestParameters(parameters: ["q":key], encoding: URLEncoding.default)
+            return .requestParameters(parameters: ["q":key,"tweet_mode":"extended"], encoding: URLEncoding.default)
         case .trends(let woeId):
             return .requestParameters(parameters: ["id":woeId], encoding: URLEncoding.default)
         }

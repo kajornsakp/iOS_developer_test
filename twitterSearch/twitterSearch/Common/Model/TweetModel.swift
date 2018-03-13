@@ -38,6 +38,7 @@ struct User : Codable {
         case location
     }
 }
+
 struct Status: Codable{
     var createdAt : String
     var id : String
@@ -52,7 +53,7 @@ struct Status: Codable{
         case retweetedCount = "retweet_count"
         case favoriteCount = "favorite_count"
         
-        case text
+        case text = "full_text"
         case truncated
         case user
     }
