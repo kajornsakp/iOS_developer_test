@@ -17,6 +17,7 @@ class DetailWireframe: DetailWireframeProtocol {
         let presenter : DetailPresenterProtocol = DetailPresenter()
         let wireframe : DetailWireframeProtocol = DetailWireframe()
         vc.presenter = presenter
+        presenter.status = status
         presenter.view = vc
         presenter.wireframe = wireframe
         return vc

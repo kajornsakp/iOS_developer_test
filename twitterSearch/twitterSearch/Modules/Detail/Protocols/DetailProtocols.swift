@@ -11,6 +11,7 @@ import UIKit
 protocol DetailViewProtocol : class {
     var presenter : DetailPresenterProtocol? {get set}
     
+    func showTweetDetail(_ status : Status)
 }
 
 protocol DetailWireframeProtocol : class{
@@ -20,6 +21,9 @@ protocol DetailWireframeProtocol : class{
 protocol DetailPresenterProtocol : class {
     var view : DetailViewProtocol? {get set}
     var wireframe : DetailWireframeProtocol? {get set}
+    var status : Status? {get set}
+    
+    func viewDidLoad()
 }
 
 

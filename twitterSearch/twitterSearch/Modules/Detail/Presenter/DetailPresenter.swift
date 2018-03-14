@@ -11,7 +11,12 @@ import Foundation
 class DetailPresenter : DetailPresenterProtocol{
     var view: DetailViewProtocol?
     var wireframe: DetailWireframeProtocol?
+    var status : Status?
     
+    func viewDidLoad() {
+        guard let status = status else {return}
+        view?.showTweetDetail(status)
+    }
 }
 
 
