@@ -10,6 +10,7 @@ import Foundation
 import Moya
 
 public enum Twitter{
+    case nextSearch(String,String)
     case search(String)
     case trends(String)
 }
@@ -22,7 +23,7 @@ extension Twitter : TargetType{
     
     public var path: String {
         switch self{
-        case .search(_):
+        case .search,.nextSearch:
             return "1.1/search/tweets.json"
         case .trends(_):
             return "/1.1/trends/place.json"
@@ -31,7 +32,7 @@ extension Twitter : TargetType{
     
     public var method: Moya.Method {
         switch self {
-        case .search,.trends:
+        case .nextSearch,.search,.trends:
             return .get
         }
     }
@@ -43,16 +44,18 @@ extension Twitter : TargetType{
     public var task: Task {
         switch self {
         case .search(let key):
-            return .requestParameters(parameters: ["q":key,"tweet_mode":"extended"], encoding: URLEncoding.default)
+            return .requestParameters(parameters: ["q":key,"tweet_mode":"extended","count":30], encoding: URLEncoding.default)
         case .trends(let woeId):
             return .requestParameters(parameters: ["id":woeId], encoding: URLEncoding.default)
+        case .nextSearch(let max_id,let key):
+            return .requestParameters(parameters: ["tweet_mode":"extended","included_entities":1,"max_id":max_id,"q":key], encoding: URLEncoding.default)
         }
         
     }
     
     public var headers: [String : String]? {
         switch self {
-        case .search,.trends:
+        case .search,.trends,.nextSearch:
             return ["Content-Type":"application/json",
                     "Authorization":"Bearer \(UserDefaults.standard.string(forKey: "twitterSearch.loginBearerToken") ?? "")"]
         }

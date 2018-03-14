@@ -19,7 +19,24 @@ class HomeDataManager : HomeDataManagerInputProtocol{
             case .success(let result):
                 do {
                     let tweet : TweetModel = try result.map(TweetModel.self)
-                    self.requestHandler?.onTweetsRetrieved(tweet)
+                    self.requestHandler?.onTweetsRetrieved(tweet,isAppended: false)
+                }catch{
+                    self.requestHandler?.onError("Cannot retrieve tweets")
+                    print(error)
+                }
+            case .failure(let error):
+                self.requestHandler?.onError(error.localizedDescription)
+            }
+        }
+    }
+    
+    func searchNextPage(_ maxId : String,_ key : String) {
+        provider.request(.nextSearch(maxId,key)){ result in
+            switch result{
+            case .success(let result):
+                do {
+                    let tweet : TweetModel = try result.map(TweetModel.self)
+                    self.requestHandler?.onTweetsRetrieved(tweet,isAppended: true)
                 }catch{
                     self.requestHandler?.onError("Cannot retrieve tweets")
                     print(error)

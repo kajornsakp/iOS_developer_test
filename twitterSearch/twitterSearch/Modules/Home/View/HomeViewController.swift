@@ -51,8 +51,13 @@ class HomeViewController: UIViewController {
 
 extension HomeViewController : HomeViewProtocol{
     
-    func showTweets(_ statuses: [Status]) {
-        self.statuses = statuses
+    func showTweets(_ statuses: [Status],isAppended : Bool) {
+        if isAppended {
+            self.statuses.append(contentsOf: statuses)
+        }
+        else{
+            self.statuses = statuses
+        }
         self.tableView.reloadData()
     }
     func showError(_ errorMessage: String) {
@@ -79,6 +84,16 @@ extension HomeViewController : UITableViewDelegate,UITableViewDataSource{
         let status = statuses[indexPath.row]
         cell.status = status
         return cell
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let status = statuses[indexPath.row]
+        self.presenter?.pushToDetailScreen(status)
+    }
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        let lastElement = statuses.count - 1
+        if indexPath.row == lastElement {
+             self.presenter?.loadMoreTweets()
+        }
     }
 }
 

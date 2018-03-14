@@ -30,6 +30,6 @@ class HomeWireframe: HomeWireframeProtocol {
             return navController
         }
         return UIViewController()
-    }
+        }
 
 }

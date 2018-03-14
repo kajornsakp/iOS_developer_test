@@ -13,11 +13,11 @@ struct SearchMetadata : Codable {
     var count : Int
     var sinceId : String
     var query : String
-    
+    var nextResult : String?
     enum CodingKeys : String,CodingKey{
         case maxId = "max_id_str"
         case sinceId = "since_id_str"
-        
+        case nextResult = "next_results"
         case count
         case query
     }
