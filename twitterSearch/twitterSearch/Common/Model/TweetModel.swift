@@ -23,11 +23,11 @@ struct SearchMetadata : Codable {
     }
 }
 struct User : Codable {
-    var id : String
-    var name : String
-    var screenName : String
-    var location : String
-    var profileImageUrl : String
+    var id : String?
+    var name : String?
+    var screenName : String?
+    var location : String?
+    var profileImageUrl : String?
     
     enum CodingKeys : String,CodingKey{
         case id = "id_str"
