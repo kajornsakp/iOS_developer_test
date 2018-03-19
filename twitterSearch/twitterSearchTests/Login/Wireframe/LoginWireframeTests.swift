@@ -33,10 +33,9 @@ class LoginWireframeTests: XCTestCase {
     }
     
     func testPushToHomeModule(){
-        let window = UIWindow()
-        let vc = LoginWireframe.createLoginModule()
+        let vc = UIViewController()
         wireframe.presentSearchModule(from: vc as! LoginViewProtocol)
-        XCTAssertTrue(window.rootViewController?.childViewControllers[1] is HomeViewController, "HomeViewController should be existed")
+        XCTAssertTrue(vc.childViewControllers[0] is HomeViewController, "HomeViewController should be existed")
     }
 }
 
