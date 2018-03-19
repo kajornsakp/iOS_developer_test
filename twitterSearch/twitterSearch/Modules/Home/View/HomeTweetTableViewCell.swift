@@ -36,10 +36,10 @@ class HomeTweetTableViewCell: UITableViewCell {
     
     func updateLayout(){
         self.tweetText.text = status.text
-        self.tweetTitle.text = "@\(status.user.screenName)"
+        self.tweetTitle.text = "@\(status.user.screenName ?? "")"
         self.retweetLabel.text = "\(status.retweetedCount)"
         self.favoriteLabel.text = "\(status.favoriteCount)"
-        let url = URL(string : status.user.profileImageUrl)
+        let url = URL(string : status.user.profileImageUrl ?? "")
         self.profileImageView.kf.setImage(with: url)
         self.profileImageView.layer.cornerRadius = self.profileImageView.frame.size.width/2
         self.profileImageView.clipsToBounds = true

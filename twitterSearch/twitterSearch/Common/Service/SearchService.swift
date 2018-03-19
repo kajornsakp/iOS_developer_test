@@ -38,7 +38,10 @@ extension Twitter : TargetType{
     }
     
     public var sampleData: Data {
-        return "".data(using: String.Encoding.utf8)!
+        guard let url = Bundle.main.url(forResource: "tweet", withExtension: "json"),let data = try? Data(contentsOf: url) else{
+            return Data()
+        }
+        return data
     }
     
     public var task: Task {
