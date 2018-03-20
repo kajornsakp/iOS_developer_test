@@ -24,6 +24,6 @@ Powered by AppCenter
 - Not included automatic XCTest test because it's required signing to run UITests as well (not enough time)
 
 # Acknowledment
-- Moya
-- PKHUD
-- Kingfisher
+- [Moya](https://github.com/Moya/Moya)
+- [PKHUD](https://github.com/pkluz/PKHUD)
+- [Kingfisher](https://github.com/onevcat/Kingfisher)
