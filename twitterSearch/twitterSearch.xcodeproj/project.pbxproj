@@ -11,6 +11,7 @@
 		33DB6B3C0E87B58084C4E57B /* Pods_twitterSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08D9409E1A9D042A1CF29221 /* Pods_twitterSearch.framework */; };
 		4D0B962A205A2588004DF45F /* UserModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0B9629205A2588004DF45F /* UserModelTests.swift */; };
 		4D0B962C205A7D67004DF45F /* User.json in Resources */ = {isa = PBXBuildFile; fileRef = 4D0B962B205A7D67004DF45F /* User.json */; };
+		4D10F4ED20601E8400DB9802 /* DetailViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D10F4EC20601E8400DB9802 /* DetailViewTests.swift */; };
 		4D211E52205F9379002469A0 /* LoginViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D211E51205F9379002469A0 /* LoginViewTests.swift */; };
 		4D211E59205FA4F5002469A0 /* LoginDataManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D211E58205FA4F5002469A0 /* LoginDataManagerTests.swift */; };
 		4D211E5B205FA627002469A0 /* HomePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D211E5A205FA627002469A0 /* HomePresenterTests.swift */; };
@@ -28,6 +29,8 @@
 		4D7D46FC2057C5A80048B71D /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7D46FB2057C5A80048B71D /* DetailViewController.swift */; };
 		4D7D46FE2057C5CA0048B71D /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7D46FD2057C5CA0048B71D /* DetailPresenter.swift */; };
 		4D7D47002057C6190048B71D /* DetailWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7D46FF2057C6190048B71D /* DetailWireframe.swift */; };
+		4D98D8BE2060CD040038A4FE /* DetailPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D98D8BD2060CD040038A4FE /* DetailPresenterTests.swift */; };
+		4D98D8C02060E7A40038A4FE /* DetailWireframeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D98D8BF2060E7A40038A4FE /* DetailWireframeTests.swift */; };
 		4DAB1230205AF53B0012B9BF /* TweetModel.json in Resources */ = {isa = PBXBuildFile; fileRef = 4DAB122F205AF53B0012B9BF /* TweetModel.json */; };
 		4DAE5B66205E6FC200F9EF39 /* SearchServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAE5B65205E6FC200F9EF39 /* SearchServiceTests.swift */; };
 		4DAE5B6C205EAA1000F9EF39 /* LoginInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAE5B6B205EAA1000F9EF39 /* LoginInteractorTests.swift */; };
@@ -80,6 +83,7 @@
 		46DEB21807291A8956089A36 /* Pods_twitterSearchTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_twitterSearchTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D0B9629205A2588004DF45F /* UserModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModelTests.swift; sourceTree = "<group>"; };
 		4D0B962B205A7D67004DF45F /* User.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = User.json; sourceTree = "<group>"; };
+		4D10F4EC20601E8400DB9802 /* DetailViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewTests.swift; sourceTree = "<group>"; };
 		4D211E51205F9379002469A0 /* LoginViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewTests.swift; sourceTree = "<group>"; };
 		4D211E58205FA4F5002469A0 /* LoginDataManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDataManagerTests.swift; sourceTree = "<group>"; };
 		4D211E5A205FA627002469A0 /* HomePresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenterTests.swift; sourceTree = "<group>"; };
@@ -97,6 +101,8 @@
 		4D7D46FB2057C5A80048B71D /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		4D7D46FD2057C5CA0048B71D /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
 		4D7D46FF2057C6190048B71D /* DetailWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailWireframe.swift; sourceTree = "<group>"; };
+		4D98D8BD2060CD040038A4FE /* DetailPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenterTests.swift; sourceTree = "<group>"; };
+		4D98D8BF2060E7A40038A4FE /* DetailWireframeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailWireframeTests.swift; sourceTree = "<group>"; };
 		4DAB122F205AF53B0012B9BF /* TweetModel.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = TweetModel.json; sourceTree = "<group>"; };
 		4DAE5B65205E6FC200F9EF39 /* SearchServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchServiceTests.swift; sourceTree = "<group>"; };
 		4DAE5B6B205EAA1000F9EF39 /* LoginInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractorTests.swift; sourceTree = "<group>"; };
@@ -199,6 +205,30 @@
 				4DAE5B65205E6FC200F9EF39 /* SearchServiceTests.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		4D10F4E920601E4D00DB9802 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4D10F4EC20601E8400DB9802 /* DetailViewTests.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4D10F4EA20601E5200DB9802 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				4D98D8BD2060CD040038A4FE /* DetailPresenterTests.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		4D10F4EB20601E5700DB9802 /* Wireframe */ = {
+			isa = PBXGroup;
+			children = (
+				4D98D8BF2060E7A40038A4FE /* DetailWireframeTests.swift */,
+			);
+			path = Wireframe;
 			sourceTree = "<group>";
 		};
 		4D211E53205FA453002469A0 /* View */ = {
@@ -325,6 +355,9 @@
 		4D3E352A205BB35300C3BAA5 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
+				4D10F4EB20601E5700DB9802 /* Wireframe */,
+				4D10F4EA20601E5200DB9802 /* Presenter */,
+				4D10F4E920601E4D00DB9802 /* View */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -973,10 +1006,13 @@
 				4DB9F6EE204FC11E0096AF35 /* twitterSearchTests.swift in Sources */,
 				4D211E5B205FA627002469A0 /* HomePresenterTests.swift in Sources */,
 				4D211E59205FA4F5002469A0 /* LoginDataManagerTests.swift in Sources */,
+				4D98D8C02060E7A40038A4FE /* DetailWireframeTests.swift in Sources */,
 				4D3E352C205BB36A00C3BAA5 /* LoginWireframeTests.swift in Sources */,
 				4DAE5B66205E6FC200F9EF39 /* SearchServiceTests.swift in Sources */,
 				4DAE5B6C205EAA1000F9EF39 /* LoginInteractorTests.swift in Sources */,
 				4D211E52205F9379002469A0 /* LoginViewTests.swift in Sources */,
+				4D98D8BE2060CD040038A4FE /* DetailPresenterTests.swift in Sources */,
+				4D10F4ED20601E8400DB9802 /* DetailViewTests.swift in Sources */,
 				4DDBD114205FC9D5008629AE /* HomeViewTests.swift in Sources */,
 				4D0B962A205A2588004DF45F /* UserModelTests.swift in Sources */,
 				4D69183F205FC38C002876CA /* HomeInteractorTests.swift in Sources */,
@@ -1138,6 +1174,7 @@
 			baseConfigurationReference = C289FDCE8E3B0090B1E9C2D2 /* Pods-twitterSearch.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P2N373N3GP;
 				INFOPLIST_FILE = twitterSearch/Info.plist;
@@ -1145,6 +1182,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kajornsak.twitterSearch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1155,6 +1193,7 @@
 			baseConfigurationReference = 3AE84861893A420D23BA5BC0 /* Pods-twitterSearch.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P2N373N3GP;
 				INFOPLIST_FILE = twitterSearch/Info.plist;
@@ -1162,6 +1201,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kajornsak.twitterSearch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
